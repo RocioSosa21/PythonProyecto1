@@ -17,12 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path 
 from .views import saludo
-from miapp import views
+from blog import views
+# from miapp import views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
-    path("",views.index, name="Index")
+    path("blog/", views.post_list, name="post_list")
+    #path("",views.index, name="Index")
 ]
